@@ -2,11 +2,16 @@ class Spellchecker {
 
   checkString(string) {
     var stringsplit = string.split(" ")
-    // return stringsplit[0].split("")
-
-    return stringsplit[0]+" ~"+stringsplit[1]+"~"
+    var highlightedString = []
+    stringsplit.forEach(function(element) {
+      if(element === "wrld"){
+        highlightedString.push("~wrld~")
+      } else {
+        highlightedString.push(element)
+      }
+    })
+    return highlightedString.join(" ")
   }
-
 
 
 }
