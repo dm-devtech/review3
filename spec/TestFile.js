@@ -15,5 +15,10 @@ describe("Spellchecker", function() {
     expect(newSpellChecker.checkString("I awoke one morning to the sound of a rook")).toEqual("I awoke one morning to the sound of a rook")
   })
 
+  it('When passed a string of 6 words all misspelled so should be highlighted', function() {
+    newSpellChecker = new Spellchecker
+    expect(newSpellChecker.checkString("We exchanged parcels on Christmas Day")).toEqual("~We~ ~exchanged~ ~parcels~ ~on~ ~Christmas~ ~Day~")
+  })
+
 
 });
