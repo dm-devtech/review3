@@ -5,17 +5,19 @@ class Spellchecker {
     return this.checkWord(stringSplit)
   }
 
+  dictionary() {
+    const words = ["hello", "world"]
+    return words
+  }
+
   checkWord(string) {
-    var highlightedString = []
+    const highlightedString = []
+    const words = this.dictionary()
     string.forEach(function(element) {
-      if(element === "wrld"){
-        highlightedString.push("~wrld~")
-      } else {
-        highlightedString.push(element)
-      }
+      if (words.includes(element)) highlightedString.push(element)
+      if (!words.includes(element)) highlightedString.push(`~${element}~`)
     })
     return highlightedString.join(" ")
   }
-
 
 }
