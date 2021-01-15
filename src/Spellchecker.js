@@ -1,8 +1,9 @@
 class Spellchecker {
 
   checkString(string) {
-    var stringSplit = string.split(" ")
-    return this.checkWord(stringSplit)
+    const stringSplit = string.split(" ")
+    if (string === "") return ""
+    if (string != "") return this.checkWord(stringSplit)
   }
 
   dictionary() {

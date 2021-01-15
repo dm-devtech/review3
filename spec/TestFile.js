@@ -22,5 +22,12 @@ describe("testing misspelled words", function() {
   })
 })
 
+describe("edge case", function() {
+  it('When passed an empty string the program should return an empty string', function() {
+    newSpellChecker = new Spellchecker
+    expect(newSpellChecker.checkString("")).toEqual("")
+  })
+})
+
 
 });
