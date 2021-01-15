@@ -6,7 +6,7 @@ class Spellchecker {
   }
 
   dictionary() {
-    const words = ["hello", "world"]
+    const words = ["hello", "world", "I", "awoke", "one", "morning", "to", "the", "sound", "of", "a", "rook"]
     return words
   }
 
