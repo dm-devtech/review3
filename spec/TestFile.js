@@ -1,5 +1,6 @@
 describe("Spellchecker", function() {
 
+describe("testing misspelled words", function() {
   it('When passed a string of 2 words with it highlights incorrect word', function() {
     newSpellChecker = new Spellchecker
     expect(newSpellChecker.checkString("hello wrld")).toEqual("hello ~wrld~")
@@ -19,6 +20,7 @@ describe("Spellchecker", function() {
     newSpellChecker = new Spellchecker
     expect(newSpellChecker.checkString("We exchanged parcels on Christmas Day")).toEqual("~We~ ~exchanged~ ~parcels~ ~on~ ~Christmas~ ~Day~")
   })
+})
 
 
 });
