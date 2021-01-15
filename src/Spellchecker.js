@@ -1,9 +1,13 @@
 class Spellchecker {
 
   checkString(string) {
-    var stringsplit = string.split(" ")
+    var stringSplit = string.split(" ")
+    return this.checkWord(stringSplit)
+  }
+
+  checkWord(string) {
     var highlightedString = []
-    stringsplit.forEach(function(element) {
+    string.forEach(function(element) {
       if(element === "wrld"){
         highlightedString.push("~wrld~")
       } else {
